@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployments</title>
+</head>
+<body>
+    <h1>Deployments</h1>
+    <form action="/deployments" method="post">
+        <button type="submit" class="button">Create Deployment</button>
+    </form>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Deployment ID</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for deployment in deployments %}
+                <tr>
+                    <td>{{ deployment }}</td>
+                    <td><a href="/logs/{{ deployment }}">View Logs</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
