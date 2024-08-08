@@ -10,7 +10,7 @@ from loguru import logger
 fake = Faker()
 app = Flask(__name__)
 
-DATASETS_LOGS = "../data"
+DATASETS_LOGS = "./data"
 
 
 def mockDeployment(deploymentId: str):
